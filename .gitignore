@@ -1,6 +1,5 @@
 out
-dist/*
-!dist/duckdb-eh.wasm
+dist/
 node_modules
 .vscode-test/
 *.vsix

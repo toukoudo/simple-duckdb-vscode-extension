@@ -28,6 +28,8 @@ async function main() {
 		entryPoints: {
 			"extension": "src/extension.ts",
 			"duckdb": "src/duckdb.ts",
+			// Bundle duckdb-WASM files
+			"duckdb-eh": "node_modules/@duckdb/duckdb-wasm/dist/duckdb-eh.wasm",
 			"duckdb-node-eh.worker": "node_modules/@duckdb/duckdb-wasm/dist/duckdb-node-eh.worker.cjs",
 		  },
 		bundle: true,
@@ -47,6 +49,8 @@ async function main() {
 		loader: {
 			".wasm": "file",
 		},
+		// Keep the original WASM file name
+		assetNames: "[name]",
 		//  Without this 2 options, an error "TypeError: The "path" argument must be of type string or an instance of URL. Received undefined" occurs
 		define: { 'import.meta.url': '_importMetaUrl' },
 		banner: {

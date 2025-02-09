@@ -8,9 +8,8 @@ export const initDb = async (ctx: vscode.ExtensionContext) => {
 	const logger = new duckdb.ConsoleLogger();
 
     const distPath = join(ctx.extensionPath, 'dist');
-    console.log(distPath);
     const bundle = {
-        mainModule: join(distPath, 'duckdb-eh.wasm'),
+        mainModule: join(distPath, 'duckdb-eh-WFXL2GAO.wasm'),
         mainWorker: join(distPath, 'duckdb-node-eh.worker.js')
     };
     // Without type option, an error "ReferenceError: require is not defined" will be thrown (in console)

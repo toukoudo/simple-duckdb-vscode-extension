@@ -32,8 +32,9 @@ async function main() {
 		  },
 		bundle: true,
 		format: 'cjs',
+		// disable minification. If enable "Error: Cannot find module 'vscode'" error occurs
 		// minify: production,
-		// sourcemap: !production,
+		sourcemap: !production,
 		outdir: "dist",
 		sourcesContent: false,
 		platform: 'node',

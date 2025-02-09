@@ -1,6 +1,7 @@
 import * as vscode from "vscode";
 const duckdb = require(`${"./duckdb"}`) as typeof import("./duckdb");
 
+
 export const activate = async (context: vscode.ExtensionContext) => {
 	const dbPromise = duckdb.initDb(context);
 
@@ -10,6 +11,8 @@ export const activate = async (context: vscode.ExtensionContext) => {
 		vscode.window.showInformationMessage("duckdb-wasm is activated...");
     });
 };
+
+// TODO need deactivate?
 
 // export const deactivate = async () => {
 //   const db = await dbPromise;

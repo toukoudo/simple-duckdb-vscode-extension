@@ -47,6 +47,7 @@ async function main() {
 		loader: {
 			".wasm": "file",
 		},
+		//  Without this 2 options, an error "TypeError: The "path" argument must be of type string or an instance of URL. Received undefined" occurs
 		define: { 'import.meta.url': '_importMetaUrl' },
 		banner: {
 			js: "const _importMetaUrl=require('url').pathToFileURL(__filename)",

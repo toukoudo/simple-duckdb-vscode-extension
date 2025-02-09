@@ -3,7 +3,6 @@
   "displayName": "simple_duckdb_example",
   "description": "",
   "version": "0.0.1",
-  "publisher": "toukoudonotrogue",
   "engines": {
     "vscode": "^1.97.0"
   },
@@ -15,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "simple-duckdb-example.helloWorld",
-        "title": "Hello World"
+        "command": "simple-duckdb-example.helloDuckDBWASM",
+        "title": "Hello DuckDB WASM"
       }
     ]
   },

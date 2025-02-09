@@ -1,5 +1,4 @@
-# simple-duckdb-example README
-A simple extension example with DuckDB-wasm
+# A simple extension example with DuckDB-wasm
 
 # How to build/run
 

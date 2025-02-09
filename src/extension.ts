@@ -9,7 +9,14 @@ export const activate = async (context: vscode.ExtensionContext) => {
 		vscode.window.showInformationMessage("duckdb-wasm is activating...");
 		const db = await dbPromise;
 		vscode.window.showInformationMessage("duckdb-wasm is activated...");
-    });
+
+		// try simple command for example
+		const c = await db.connect();
+		const query = "select 'quack' as duck";
+		const result = await c.query(query);
+
+		vscode.window.showInformationMessage(`query ${query} return ${result}`);
+	});
 };
 
 // TODO need deactivate?
